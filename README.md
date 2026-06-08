@@ -30,14 +30,14 @@ You can compile the server and the client components manually using gcc.
 The server only handles network routing and requires no external audio libraries, just standard POSIX threads:
 
 ```bash
-gcc server.c -lpthread -o disc_server
+gcc server.c -lpthread -o server
 ```
 
 2. Compile the Client
 The client links against PortAudio, Opus, ncurses, and pthread:
 
 ```bash
-gcc disc_client.c -lportaudio -lopus -lncurses -lpthread -o disc_client
+gcc client.c -lportaudio -lopus -lncurses -lpthread -o client
 ```
 
 3. Run the compiled server binary on your host or a remote machine, run client binary on your machine.
