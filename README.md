@@ -30,7 +30,6 @@ You can compile the server and the client components manually using gcc.
 The server only handles network routing and requires no external audio libraries, just standard POSIX threads:
 
 ```bash
-Bash
 gcc server.c -lpthread -o disc_server
 ```
 
@@ -38,19 +37,18 @@ gcc server.c -lpthread -o disc_server
 The client links against PortAudio, Opus, ncurses, and pthread:
 
 ```bash
-Bash
 gcc disc_client.c -lportaudio -lopus -lncurses -lpthread -o disc_client
 ```
 
 3. Run the compiled server binary on your host or a remote machine, run client binary on your machine.
 
 ```bash
-Bash
 ./server
 ./clinet
 ```
 
-TUI Controls
+## TUI Controls
+
 TAB - Toggle microphone (Mute / Unmute). The bottom status bar will change color.
 
 Type Text + ENTER - Send a chat message to all connected peers.
